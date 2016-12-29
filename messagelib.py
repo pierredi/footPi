@@ -1,8 +1,9 @@
-MSG_DEBUT=u"Kick Off"
-MSG_MI_TEMPS=u"Halftime"
-MSG_FIN=u"Match Finished"
-MSG_REPRISE=u"2nd Half Started"
-MSG_BUT=u"Goal for"
+MSG_DEBUT = u"Kick Off"
+MSG_MI_TEMPS = u"Halftime"
+MSG_FIN = u"Match Finished"
+MSG_REPRISE = u"2nd Half Started"
+MSG_BUT = u"Goal for"
+
 
 def getmessage(code):
     """Retourne le pays correspondant au code Pays"""
@@ -16,3 +17,10 @@ def getmessage(code):
     elif MSG_REPRISE in code:
         result = u"Reprise de la deuxi\u00e8me mi-temps"
     return result
+
+if __name__ == "__main__":
+    print getmessage(MSG_DEBUT)
+    print getmessage(MSG_BUT)
+    print getmessage(MSG_FIN)
+    print getmessage(MSG_MI_TEMPS)
+    print getmessage(MSG_REPRISE)

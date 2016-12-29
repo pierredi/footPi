@@ -24,6 +24,7 @@ PAYS_IRAN = u"IRN"
 PAYS_ISRAEL = u"ISR"
 PAYS_ITALIE = u"ITA"
 PAYS_JAPON = u"JPN"
+PAYS_KOWEIT = u"KUW"
 PAYS_PAYS_BAS = u"NED"
 PAYS_PORTUGAL = u"POR"
 PAYS_QATAR = u"QAT"
@@ -71,6 +72,9 @@ def getpays(code):
         result += colorlib.ecrire(colorlib.ENCRE_BLANC_BLEU, u"ce")
     elif PAYS_JAPON in code:
         result = u"Ja" + colorlib.ecrire(colorlib.ENCRE_ROUGE, u"p") + u"on"
+    elif PAYS_KOWEIT in code:
+        result = colorlib.ecrire(colorlib.ENCRE_NOIRE, u"Kow") + colorlib.ecrire(colorlib.ENCRE_VERTE, u"e")
+        result += u"\u00ef" + colorlib.ecrire(colorlib.ENCRE_ROUGE, u"t")
     elif PAYS_EGYPTE in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Eg") + u"yp" + colorlib.ecrire(colorlib.ENCRE_NOIRE, u"te")
     elif PAYS_TAHITI in code:
@@ -150,6 +154,7 @@ if __name__ == "__main__":
     print getpays(u"CIV")
     print getpays(u"GRE")
     print getpays(u"JPN")
+    print getpays(u"KUW")
     print getpays(u"EGY")
     print getpays(u"TAH")
     print getpays(u"BRA")

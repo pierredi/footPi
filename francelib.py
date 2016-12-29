@@ -1,23 +1,24 @@
-FR_ANGERS=u"Angers"
-FR_BASTIA=u"Bastia"
-FR_BORDEAUX=u"Girondins Bordeaux"
-FR_CAEN=u"SM Caen"
-FR_DIJON=u"Dijon FCO"
-FR_GUINGAMP=u"Guingamp"
-FR_LILLE=u"Lille OSC"
-FR_LORIENT=u"FC Lorient"
-FR_LYON=u"Lyon"
-FR_MARSEILLE=u"Olympique Marseille"
-FR_METZ=u"metz"
-FR_MONACO=u"Monaco"
-FR_MONTPELLIER=u"Montpellier HSC"
-FR_NANCY=u"AS Nancy"
-FR_NANTES=u"Nantes"
-FR_NICE=u"OGC Nice"
-FR_PARIS=u"Paris Saint Germain"
-FR_RENNES=u"Stade Rennais"
-FR_ST_ETIENNE=u"AS Saint-Etienne"
-FR_TOULOUSE=u"Toulouse FC"
+FR_ANGERS = u"Angers"
+FR_BASTIA = u"Bastia"
+FR_BORDEAUX = u"Girondins Bordeaux"
+FR_CAEN = u"SM Caen"
+FR_DIJON = u"Dijon FCO"
+FR_GUINGAMP = u"Guingamp"
+FR_LILLE = u"Lille OSC"
+FR_LORIENT = u"FC Lorient"
+FR_LYON = u"Lyon"
+FR_MARSEILLE = u"Olympique Marseille"
+FR_METZ = u"metz"
+FR_MONACO = u"Monaco"
+FR_MONTPELLIER = u"Montpellier HSC"
+FR_NANCY = u"AS Nancy"
+FR_NANTES = u"Nantes"
+FR_NICE = u"OGC Nice"
+FR_PARIS = u"Paris Saint Germain"
+FR_RENNES = u"Stade Rennais"
+FR_ST_ETIENNE = u"AS Saint-Etienne"
+FR_TOULOUSE = u"Toulouse FC"
+
 
 def getville(code):
     """Retourne la ville correspondant au code"""
@@ -65,17 +66,6 @@ def getville(code):
     return result
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    print getville(FR_NANTES)
+    print getville(FR_PARIS)
