@@ -9,17 +9,20 @@ PAYS_AZERBAIDJAN=u"AZE"
 PAYS_BANGLADESH=u"BGD"
 PAYS_BELGIQUE=u"BEL"
 PAYS_BRESIL=u"BRA"
+PAYS_COTE_IVOIRE=u"CIV"
 PAYS_ECOSSE=u"SCO"
 PAYS_EGYPTE=u"EGY"
 PAYS_EMIRATS=u"UAE"
 PAYS_ESPAGNE=u"ESP"
 PAYS_FRANCE=u"FRA"
+PAYS_GABON=u"GAB"
 PAYS_GALLES=u"WAL"
 PAYS_GRECE=u"GRE"
 PAYS_HONG_KONG=u"HKG"
 PAYS_IRAN=u"IRN"
 PAYS_ISRAEL=u"ISR"
 PAYS_ITALIE=u"ITA"
+PAYS_JAPON=u"JPN"
 PAYS_PAYS_BAS=u"NED"
 PAYS_PORTUGAL=u"POR"
 PAYS_QATAR=u"QAT"
@@ -29,6 +32,7 @@ PAYS_TAHITI=u"TAH"
 PAYS_TRINITE_TOBAGO=u"TTO"
 PAYS_TUNISIE=u"TUN"
 PAYS_TURQUIE=u"TUR"
+PAYS_VIET_NAM=u"VIE"
 MATCH_AMICAL=u"FG"
 
 def getpays(code):
@@ -49,23 +53,29 @@ def getpays(code):
     elif PAYS_ALGERIE in code:
         result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"Alg")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"\u00e9")+u"rie"
     elif PAYS_ARGENTINE in code:
-        result = u"Argentine"
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU,u"Ar")+u"gen"+colorlib.ecrire(colorlib.ENCRE_BLEU,u"tine")
+    elif PAYS_GABON in code:
+        result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"Ga")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"b")+colorlib.ecrire(colorlib.ENCRE_BLEU,u"on")
+    elif PAYS_COTE_IVOIRE in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ORANGE,u"C\u00f4te")+u" d\u0027iv"+colorlib.ecrire(colorlib.ENCRE_VERTE,u"oire")
     elif PAYS_GRECE in code:
-        result = u"Gr\u00e8ce"
+        result = colorlib.ecrire(colorlib.ENCRE_BLANC_BLEU,u"Gr")+colorlib.ecrire(colorlib.ENCRE_BLEU_BLANC,u"\u00e8")+colorlib.ecrire(colorlib.ENCRE_BLANC_BLEU,u"ce")
+    elif PAYS_JAPON in code:
+        result = u"Ja"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"p")+u"on"
     elif PAYS_EGYPTE in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Eg")+u"yp"+colorlib.ecrire(colorlib.ENCRE_NOIRE,u"te")
     elif PAYS_TAHITI in code:
-        result = u"Tahiti"
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Ta")+u"hi"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"ti")
     elif PAYS_BRESIL in code:
-        result = u"Bresil"
+        result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"B")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"r\u00e9")+colorlib.ecrire(colorlib.ENCRE_BLEU,u"s")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"i")+colorlib.ecrire(colorlib.ENCRE_VERTE,u"l")
     elif PAYS_SENEGAL in code:
-        result = u"Senegal"
+        result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"S\u00e9")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"n")+colorlib.ecrire(colorlib.ENCRE_VERTE,u"\u2605 ")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"g")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"al")
     elif PAYS_TRINITE_TOBAGO in code:
-        result = u"Trinite et Tobago"
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Trinit\u00e9")+colorlib.ecrire(colorlib.ENCRE_NOIRE,u"et ")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Tobago")
     elif PAYS_SURINAME in code:
-        result = u"Suriname"
+        result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"Su")+u"r"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"i")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"\u2605 ")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"n")+u"a"+colorlib.ecrire(colorlib.ENCRE_VERTE,u"me")
     elif PAYS_BANGLADESH in code:
-        result = u"Bangladesh"
+        result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"Bang")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"la")+colorlib.ecrire(colorlib.ENCRE_VERTE,u"desh")
     elif PAYS_TUNISIE in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Tun")+u"i"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"sie")
     elif PAYS_ISRAEL in code:
@@ -73,27 +83,65 @@ def getpays(code):
     elif PAYS_TURQUIE in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Tur")+u"q"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"uie")
     elif PAYS_PAYS_BAS in code:
-        result = u"Pays Bas"
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Pa")+u"ys "+colorlib.ecrire(colorlib.ENCRE_BLEU,u"Bas")
     elif PAYS_IRAN in code:
-        result = u"Iran"
+        result = colorlib.ecrire(colorlib.ENCRE_VERTE,u"Ir")+u"a"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"n")
     elif PAYS_HONG_KONG in code:
-        result = u"Hong Kong"
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Hong")+u"\u269d"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u" Kong")
     elif PAYS_ECOSSE in code:
         result = colorlib.ecrire(colorlib.ENCRE_BLEU,u"\u00c9")+u"c"+colorlib.ecrire(colorlib.ENCRE_BLEU,u"os")+u"s"+colorlib.ecrire(colorlib.ENCRE_BLEU,u"e")
     elif PAYS_GALLES in code:
-        result = u"Pays de Galles"
+        result = u"Pays"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"\U0001F432 ")+colorlib.ecrire(colorlib.ENCRE_VERTE,u"Galles")
     elif PAYS_AZERBAIDJAN in code:
-        result = u"Azerba\u00efdjan"
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU,u"Azer")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"ba\u00ef")+colorlib.ecrire(colorlib.ENCRE_VERTE,u"djan")
     elif PAYS_QATAR in code:
-        result = u"Qatar"
+        result = u"Qa"+colorlib.ecrire(colorlib.ENCRE_VIOLET,u"tar")
     elif PAYS_BELGIQUE in code:
         result = colorlib.ecrire(colorlib.ENCRE_NOIRE,u"Be")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"lgi")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"que")
     elif PAYS_AUSTRALIE in code:
         result = colorlib.ecrire(colorlib.ENCRE_BLEU,u"A")+u"u"+colorlib.ecrire(colorlib.ENCRE_ROUGE,u"s")+colorlib.ecrire(colorlib.ENCRE_BLEU,u"tralie")
     elif PAYS_ARABIE in code:
         result = colorlib.ecrire(colorlib.ENCRE_BLANC_VERT,u"Arabie Saoudite")
+    elif PAYS_VIET_NAM in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Vi\u00eat")+colorlib.ecrire(colorlib.ENCRE_JAUNE,u"\u2605")+colorlib.ecrire(colorlib.ENCRE_ROUGE,u" Nam")
     elif PAYS_EMIRATS in code:
-        result = u"Emirats Arabes Unis"
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE,u"Emirats")+colorlib.ecrire(colorlib.ENCRE_VERTE,u" Ara")+u"bes"+colorlib.ecrire(colorlib.ENCRE_NOIRE,u" Unis")
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
+
+if __name__ == "__main__":
+    print getpays(u"ESP")
+    print getpays(u"ITA")
+    print getpays(u"FRA")
+    print getpays(u"ENG")
+    print getpays(u"GER")
+    print getpays(u"POR")
+    print getpays(u"ALG")
+    print getpays(u"ARG")
+    print getpays(u"GAB")
+    print getpays(u"CIV")
+    print getpays(u"GRE")
+    print getpays(u"JPN")
+    print getpays(u"EGY")
+    print getpays(u"TAH")
+    print getpays(u"BRA")
+    print getpays(u"sen")
+    print getpays(u"TTO")
+    print getpays(u"SUR")
+    print getpays(u"BGD")
+    print getpays(u"TUN")
+    print getpays(u"ISR")
+    print getpays(u"TUR")
+    print getpays(u"NED")
+    print getpays(u"IRN")
+    print getpays(u"HKG")
+    print getpays(u"SCO")
+    print getpays(u"WAL")
+    print getpays(u"AZE")
+    print getpays(u"QAT")
+    print getpays(u"BEL")
+    print getpays(u"AUS")
+    print getpays(u"KSA")
+    print getpays(u"VIE")
+    print getpays(u"UAE")
