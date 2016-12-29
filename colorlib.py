@@ -1,15 +1,16 @@
 ENCRE_ROUGE = [str(1),str(31),str(40)]
 ENCRE_VERTE = [str(1),str(32),str(40)]
 ENCRE_JAUNE = [str(1),str(33),str(40)]
+ENCRE_ORANGE = [str(3),str(30),str(43)]
 ENCRE_JAUNE_VIOLET = [str(1),str(33),str(45)]
 ENCRE_BLEU_VIOLET = [str(1),str(36),str(45)]
+ENCRE_BLEU_BLANC = [str(4),str(34),str(47)]
+ENCRE_BLANC_BLEU = [str(1),str(37),str(44)]
 ENCRE_VERT_BLANC = [str(5),str(32),str(47)]
 ENCRE_BLANC_VERT = [str(7),str(32),str(47)]
 ENCRE_BLEU = [str(1),str(34),str(40)]
 ENCRE_VIOLET = [str(1),str(35),str(40)]
 ENCRE_NOIRE = [str(7),str(37),str(40)]
-
-
 
 def liste_couleur():
     print(u"test de couleur")
@@ -23,7 +24,9 @@ def liste_couleur():
         print('\n')
     print("fin test couleur")
 
-
 def ecrire(couleur,phrase):
     format=';'.join(couleur)
-    return("\x1b[%sm%s\x1b[0m" %(format,phrase))
+    return "\x1b[%sm%s\x1b[0m" % (format, phrase)
+
+if __name__ == "__main__":
+    liste_couleur()
