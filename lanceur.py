@@ -25,6 +25,7 @@ print payslib.getpays(u"SCO")
 print payslib.getpays(u"KSA")
 print payslib.getpays(u"AUS")
 print payslib.getpays(u"EGY")
+print payslib.getpays(u"ARG")
 
 #colorlib.liste_couleur()
 
