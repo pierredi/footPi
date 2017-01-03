@@ -3,7 +3,7 @@ import time
 
 start_time = time.time()
 listePost = footParsing.getfeed()
-date = time.strptime("Wed, 28 Dec 2016 10:44:12 GMT", "%a, %d %b %Y %H:%M:%S %Z")
+date = time.strptime("Mon, 2 Jan 2017 21:06:00 GMT", "%a, %d %b %Y %H:%M:%S %Z")
 
 while (time.time()-start_time) < 48000:
     print('.')
