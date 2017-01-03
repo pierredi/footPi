@@ -57,8 +57,9 @@ def getdetail(info):
         print(colorlib.ecrire(colorlib.ENCRE_VERTE, team1 + ": ") + colorlib.ecrire(colorlib.ENCRE_JAUNE, score1))
     else:
         tmp = weblib.buteurs_home(info.id)
-        print(colorlib.ecrire(colorlib.ENCRE_VERTE, team1 + ": ") + colorlib.ecrire(colorlib.ENCRE_JAUNE,
-                                                                                    score1) + "-> " + ','.join(tmp))
+        chaine = colorlib.ecrire(colorlib.ENCRE_VERTE, team1 + ": ")
+        chaine += colorlib.ecrire(colorlib.ENCRE_JAUNE,score1) + "-> " + ','.join(tmp)
+        print(chaine)
 
     if len(weblib.jaune_home(info.id)) > 0:
         tmp = weblib.jaune_home(info.id)
@@ -76,8 +77,9 @@ def getdetail(info):
         print(colorlib.ecrire(colorlib.ENCRE_VERTE, team2 + ": ") + colorlib.ecrire(colorlib.ENCRE_JAUNE, score2))
     else:
         tmp = weblib.buteurs_ext(info.id)
-        print(colorlib.ecrire(colorlib.ENCRE_VERTE, team2 + ": ") + colorlib.ecrire(colorlib.ENCRE_JAUNE,
-                                                                                    score2) + "-> " + ','.join(tmp))
+        chaine = colorlib.ecrire(colorlib.ENCRE_VERTE, team2 + ": ")
+        chaine += colorlib.ecrire(colorlib.ENCRE_JAUNE,score2) + "-> " + ','.join(tmp)
+        print(chaine)
 
     if len(weblib.jaune_ext(info.id)) > 0:
         tmp = weblib.jaune_ext(info.id)
