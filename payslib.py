@@ -11,6 +11,7 @@ PAYS_BANGLADESH = u"BGD"
 PAYS_BELGIQUE = u"BEL"
 PAYS_BRESIL = u"BRA"
 PAYS_COTE_IVOIRE = u"CIV"
+PAYS_CHYPRE = u"CYP"
 PAYS_ECOSSE = u"SCO"
 PAYS_EGYPTE = u"EGY"
 PAYS_EMIRATS = u"UAE"
@@ -136,6 +137,8 @@ def getpays(code):
     elif PAYS_EMIRATS in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Emirats") + colorlib.ecrire(colorlib.ENCRE_VERTE, u" Ara")
         result += u"bes" + colorlib.ecrire(colorlib.ENCRE_NOIRE, u" Unis")
+    elif PAYS_CHYPRE in code:
+        result = u"Chypre"
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
@@ -177,3 +180,4 @@ if __name__ == "__main__":
     print getpays(u"KSA")
     print getpays(u"VIE")
     print getpays(u"UAE")
+    print getpays(u"CYP")
