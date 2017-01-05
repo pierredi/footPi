@@ -1,3 +1,4 @@
+import colorlib
 FR_ANGERS = u"Angers"
 FR_BASTIA = u"Bastia"
 FR_BORDEAUX = u"Girondins Bordeaux"
@@ -24,7 +25,8 @@ def getville(code):
     """Retourne la ville correspondant au code"""
     result = code
     if FR_ANGERS in code:
-        result = u"Angers"
+        result = colorlib.ecrire(colorlib.ENCRE_NOIRE, u"A")+u"n"+colorlib.ecrire(colorlib.ENCRE_NOIRE, u"g")
+        result += u"e"+colorlib.ecrire(colorlib.ENCRE_NOIRE, u"r")+u"s"
     elif FR_BASTIA in code:
         result = u"Bastia"
     elif FR_BORDEAUX in code:
@@ -38,7 +40,7 @@ def getville(code):
     elif FR_LILLE in code:
         result = u"Lille"
     elif FR_LORIENT in code:
-        result = u"Lorient"
+        result = colorlib.ecrire(colorlib.ENCRE_LORIENT, u"Lorient")
     elif FR_LYON in code:
         result = u"Lyon"
     elif FR_MARSEILLE in code:
@@ -52,7 +54,7 @@ def getville(code):
     elif FR_NANCY in code:
         result = u"Nancy"
     elif FR_NANTES in code:
-        result = u"Nantes"
+        result = colorlib.ecrire(colorlib.ENCRE_NANTES, u"Nantes")
     elif FR_NICE in code:
         result = u"Nice"
     elif FR_PARIS in code:
@@ -67,5 +69,23 @@ def getville(code):
 
 
 if __name__ == "__main__":
+    print getville(FR_ANGERS)
+    print getville(FR_BASTIA)
+    print getville(FR_BORDEAUX)
+    print getville(FR_CAEN)
+    print getville(FR_DIJON)
+    print getville(FR_ST_ETIENNE)
+    print getville(FR_GUINGAMP)
+    print getville(FR_LILLE)
+    print getville(FR_LORIENT)
+    print getville(FR_LYON)
+    print getville(FR_MARSEILLE)
+    print getville(FR_METZ)
+    print getville(FR_MONTPELLIER)
+    print getville(FR_MONACO)
     print getville(FR_NANTES)
+    print getville(FR_NANCY)
+    print getville(FR_NICE)
     print getville(FR_PARIS)
+    print getville(FR_RENNES)
+    print getville(FR_TOULOUSE)
