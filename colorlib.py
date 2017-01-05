@@ -8,9 +8,14 @@ ENCRE_BLEU_BLANC = [str(4), str(34), str(47)]
 ENCRE_BLANC_BLEU = [str(1), str(37), str(44)]
 ENCRE_VERT_BLANC = [str(5), str(32), str(47)]
 ENCRE_BLANC_VERT = [str(7), str(32), str(47)]
+ENCRE_BLANC = [str(1), str(37), str(40)]
 ENCRE_BLEU = [str(1), str(34), str(40)]
 ENCRE_VIOLET = [str(1), str(35), str(40)]
 ENCRE_NOIRE = [str(7), str(37), str(40)]
+ENCRE_BLANC_ROUGE_U = [str(4), str(31), str(47)]
+ENCRE_ROUGE_BLANC = [str(7), str(31), str(47)]
+ENCRE_NANTES = [str(1), str(33), str(42)]
+ENCRE_LORIENT = [str(7), str(30), str(43)]
 
 
 def liste_couleur():
