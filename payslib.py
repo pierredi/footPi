@@ -22,10 +22,12 @@ PAYS_GALLES = u"WAL"
 PAYS_GRECE = u"GRE"
 PAYS_HONG_KONG = u"HKG"
 PAYS_IRAN = u"IRN"
+PAYS_IRLANDE = u"NIR"
 PAYS_ISRAEL = u"ISR"
 PAYS_ITALIE = u"ITA"
 PAYS_JAPON = u"JPN"
 PAYS_KOWEIT = u"KUW"
+PAYS_MALTE = u"MLT"
 PAYS_PAYS_BAS = u"NED"
 PAYS_PORTUGAL = u"POR"
 PAYS_QATAR = u"QAT"
@@ -137,8 +139,14 @@ def getpays(code):
     elif PAYS_EMIRATS in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Emirats") + colorlib.ecrire(colorlib.ENCRE_VERTE, u" Ara")
         result += u"bes" + colorlib.ecrire(colorlib.ENCRE_NOIRE, u" Unis")
+    elif PAYS_IRLANDE in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLANC_ROUGE_U, u"Irlande")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE_BLANC, u" du ")
+        result += colorlib.ecrire(colorlib.ENCRE_BLANC_ROUGE_U, u"nord")
+    elif PAYS_MALTE in code:
+        result = u"Mal"+colorlib.ecrire(colorlib.ENCRE_ROUGE, u"te")
     elif PAYS_CHYPRE in code:
-        result = u"Chypre"
+        result = u"Chy"+colorlib.ecrire(colorlib.ENCRE_BLANC_ORANGE, u"\U0001F54A ")+u"pre"
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
@@ -181,3 +189,5 @@ if __name__ == "__main__":
     print getpays(u"VIE")
     print getpays(u"UAE")
     print getpays(u"CYP")
+    print getpays(u"NIR")
+    print getpays(u"MLT")
