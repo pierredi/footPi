@@ -48,17 +48,17 @@ def getdetail(info):
     :type info: post rss
     """
     country, div, team1, team2, score1, score2, informa = getinfo(info.summary)
-    print(info.id)
+    print(colorlib.violet(info.id))
     print(colorlib.ecrire(colorlib.ENCRE_JAUNE_VIOLET, info.published))
     print (payslib.getpays(country))
     print("Division: " + liguelib.getdivision(div))
 
     if score1 == '0':
-        print(colorlib.ecrire(colorlib.ENCRE_VERTE, team1 + ": ") + colorlib.ecrire(colorlib.ENCRE_JAUNE, score1))
+        print(colorlib.vert(team1 + ": ") + colorlib.jaune(score1))
     else:
         tmp = weblib.buteurs_home(info.id)
-        chaine = colorlib.ecrire(colorlib.ENCRE_VERTE, team1 + ": ")
-        chaine += colorlib.ecrire(colorlib.ENCRE_JAUNE, score1) + "-> " + ','.join(tmp)
+        chaine = colorlib.vert(team1 + ": ")
+        chaine += colorlib.jaune(score1) + " -> " + ','.join(tmp)
         print(chaine)
 
     """si il y a des cartons on les affiche"""
@@ -75,11 +75,11 @@ def getdetail(info):
         print("remplacement: " + ','.join(tmp))
 
     if score2 == '0':
-        print(colorlib.ecrire(colorlib.ENCRE_VERTE, team2 + ": ") + colorlib.ecrire(colorlib.ENCRE_JAUNE, score2))
+        print(colorlib.vert(team2 + ": ") + colorlib.jaune(score2))
     else:
         tmp = weblib.buteurs_ext(info.id)
-        chaine = colorlib.ecrire(colorlib.ENCRE_VERTE, team2 + ": ")
-        chaine += colorlib.ecrire(colorlib.ENCRE_JAUNE, score2) + "-> " + ','.join(tmp)
+        chaine = colorlib.vert(team2 + ": ")
+        chaine += colorlib.jaune(score2) + "-> " + ','.join(tmp)
         print(chaine)
 
     if len(weblib.jaune_ext(info.id)) > 0:
