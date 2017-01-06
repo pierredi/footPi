@@ -8,29 +8,30 @@ Ceci pour obtenir les scores des matchs de foot en direct et pouvoir faire des t
 - déclenchement de LED
 
 
-Dans un premier temps vous devrez installer le module feedparser qui vous permettra de traiter le flux RSS.
--> sudo apt-get install python-pip
--> sudo pip install feedparser
+Dans un premier temps vous devrez installer le module feedparser qui vous permettra de traiter le flux RSS:
+	sudo apt-get install python-pip
+	sudo pip install feedparser
 
 
 Le module lxml vous permettra de parser des page html et de récupérer des informations via XPATH.
--> sudo apt-get install python3-lxml
+	sudo apt-get install python3-lxml	
 
 
 La librairie "colorlib.py" contient les différentes couleurs et méthodes pour écrire dans la console.
-Pour obtenir l'ensemble des couleurs vous pouvez lancer la commande :
--> python colorlib.Py
+Pour obtenir l'ensemble des couleurs vous pouvez lancer la commande :	
+	python colorlib.Py
+	
 Vous pourrez ainsi ajouter une couleur sous la forme d'un tableau [style, couleur texte, couleur de fond].
 
 
 La librairie "payslib.py" contient un ensemble de pays et retourne en fonction de son trigrame le pays écrit avec les couleurs de son drapeau.
 si le pays n'est pas trouvé on retourne le trigramme.
 Pour obtenir l'ensemble des pays contenu dans la lib, vous pouvez lancer la commande :
--> python payslib.py
+	python payslib.py
 
 
 La librairie "messagelib.py" contient l'nsemble des messages du post. Vous pouvez voir les messages disponibles en lançant la commande :
--> python messagelib.py
+	python messagelib.py
 
 
 La librairie "footParsing.py" permet de récupérer les flux et traiter les informations.
@@ -52,7 +53,7 @@ pour chacune des informations, nous afficherons :
 	- le message du post
 
 	le programme se lance avec la commande suivante:
-  -> python lanceur.py
+  	python lanceur.py
   
 
 
