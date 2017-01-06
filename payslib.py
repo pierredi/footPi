@@ -16,6 +16,7 @@ PAYS_ECOSSE = u"SCO"
 PAYS_EGYPTE = u"EGY"
 PAYS_EMIRATS = u"UAE"
 PAYS_ESPAGNE = u"ESP"
+PAYS_ESTONIE = u"EST"
 PAYS_FRANCE = u"FRA"
 PAYS_GABON = u"GAB"
 PAYS_GALLES = u"WAL"
@@ -28,6 +29,7 @@ PAYS_ITALIE = u"ITA"
 PAYS_JAPON = u"JPN"
 PAYS_JORDANIE = u"JOR"
 PAYS_KOWEIT = u"KUW"
+PAYS_LIBAN = u"LBN"
 PAYS_MALTE = u"MLT"
 PAYS_OMAN = u"OMA"
 PAYS_PAYS_BAS = u"NED"
@@ -35,6 +37,7 @@ PAYS_PORTUGAL = u"POR"
 PAYS_QATAR = u"QAT"
 PAYS_SENEGAL = u"sen"
 PAYS_SURINAME = u"SUR"
+PAYS_SYRIE = u"SYR"
 PAYS_TAHITI = u"TAH"
 PAYS_TRINITE_TOBAGO = u"TTO"
 PAYS_TUNISIE = u"TUN"
@@ -153,6 +156,18 @@ def getpays(code):
     elif PAYS_OMAN in code:
         result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"O")+colorlib.ecrire(colorlib.ENCRE_BLANC, u"m")
         result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"a") + colorlib.ecrire(colorlib.ENCRE_VERTE, u"n")
+    elif PAYS_ESTONIE in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU, u"Es")
+        result += colorlib.ecrire(colorlib.ENCRE_BLANC, u"ton")
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"ie")
+    elif PAYS_SYRIE in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Sy")
+        result += colorlib.ecrire(colorlib.ENCRE_VERT_BLANC, u"\u2605 r\u2605 ")
+        result += colorlib.ecrire(colorlib.ENCRE_BLANC, u"ie")
+    elif PAYS_LIBAN in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Li")
+        result += colorlib.ecrire(colorlib.ENCRE_VERT_BLANC, u"b\U0001F384 ")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"an")
     elif PAYS_CHYPRE in code:
         result = u"Chy"+colorlib.ecrire(colorlib.ENCRE_ORANGE, u"\U0001F54A ")+u"pre"
     elif MATCH_AMICAL in code:
@@ -201,3 +216,6 @@ if __name__ == "__main__":
     print getpays(u"NIR")
     print getpays(u"MLT")
     print getpays(u"OMA")
+    print getpays(u"SYR")
+    print getpays(u"LBN")
+    print getpays(u"EST")
