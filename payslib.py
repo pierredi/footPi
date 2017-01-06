@@ -26,8 +26,10 @@ PAYS_IRLANDE = u"NIR"
 PAYS_ISRAEL = u"ISR"
 PAYS_ITALIE = u"ITA"
 PAYS_JAPON = u"JPN"
+PAYS_JORDANIE = u"JOR"
 PAYS_KOWEIT = u"KUW"
 PAYS_MALTE = u"MLT"
+PAYS_OMAN = u"OMA"
 PAYS_PAYS_BAS = u"NED"
 PAYS_PORTUGAL = u"POR"
 PAYS_QATAR = u"QAT"
@@ -75,6 +77,9 @@ def getpays(code):
         result += colorlib.ecrire(colorlib.ENCRE_BLANC_BLEU, u"ce")
     elif PAYS_JAPON in code:
         result = u"Ja" + colorlib.ecrire(colorlib.ENCRE_ROUGE, u"p") + u"on"
+    elif PAYS_JORDANIE in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Jo") + colorlib.ecrire(colorlib.ENCRE_NOIRE, u"rd")
+        result += u"an" + colorlib.ecrire(colorlib.ENCRE_VERTE, u"ie")
     elif PAYS_KOWEIT in code:
         result = colorlib.ecrire(colorlib.ENCRE_NOIRE, u"Kow") + colorlib.ecrire(colorlib.ENCRE_VERTE, u"e")
         result += u"\u00ef" + colorlib.ecrire(colorlib.ENCRE_ROUGE, u"t")
@@ -145,8 +150,11 @@ def getpays(code):
         result += colorlib.ecrire(colorlib.ENCRE_BLANC_ROUGE_U, u"nord")
     elif PAYS_MALTE in code:
         result = u"Mal"+colorlib.ecrire(colorlib.ENCRE_ROUGE, u"te")
+    elif PAYS_OMAN in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ROUGE, u"O")+colorlib.ecrire(colorlib.ENCRE_BLANC, u"m")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"a") + colorlib.ecrire(colorlib.ENCRE_VERTE, u"n")
     elif PAYS_CHYPRE in code:
-        result = u"Chy"+colorlib.ecrire(colorlib.ENCRE_BLANC_ORANGE, u"\U0001F54A ")+u"pre"
+        result = u"Chy"+colorlib.ecrire(colorlib.ENCRE_ORANGE, u"\U0001F54A ")+u"pre"
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
@@ -165,6 +173,7 @@ if __name__ == "__main__":
     print getpays(u"CIV")
     print getpays(u"GRE")
     print getpays(u"JPN")
+    print getpays(u"JOR")
     print getpays(u"KUW")
     print getpays(u"EGY")
     print getpays(u"TAH")
@@ -191,3 +200,4 @@ if __name__ == "__main__":
     print getpays(u"CYP")
     print getpays(u"NIR")
     print getpays(u"MLT")
+    print getpays(u"OMA")
