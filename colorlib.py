@@ -4,7 +4,6 @@ ENCRE_JAUNE = [str(1), str(33), str(40)]
 ENCRE_ORANGE = [str(3), str(30), str(43)]
 ENCRE_JAUNE_VIOLET = [str(1), str(33), str(45)]
 ENCRE_BLEU_VIOLET = [str(1), str(36), str(45)]
-ENCRE_BLEU_BLANC = [str(4), str(34), str(47)]
 ENCRE_BLANC_BLEU = [str(1), str(37), str(44)]
 ENCRE_VERT_BLANC = [str(5), str(32), str(47)]
 ENCRE_BLANC_VERT = [str(7), str(32), str(47)]
@@ -16,6 +15,9 @@ ENCRE_BLANC_ROUGE_U = [str(4), str(31), str(47)]
 ENCRE_ROUGE_BLANC = [str(7), str(31), str(47)]
 ENCRE_NANTES = [str(1), str(33), str(42)]
 ENCRE_LORIENT = [str(7), str(30), str(43)]
+ENCRE_ORANGE_BLANC = [str(7), str(37), str(43)]
+ENCRE_BLEU_BLANC = [str(7), str(37), str(44)]
+
 RED = u"\033[91m"
 GREEN = u"\033[1;92m"
 YELLOW = u"\033[1;93m"
