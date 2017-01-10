@@ -15,7 +15,6 @@ while (time.time() - start_time) < 148000:
         if date < timeCourant:
             footParsing.getdetail(post)
             date = timeCourant
-            time.sleep(0.5)
         time.sleep(0.5)
     time.sleep(30)
 print('----')
