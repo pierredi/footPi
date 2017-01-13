@@ -1,5 +1,5 @@
+# coding: utf8
 import colorlib
-
 PAYS_ALGERIE = u"ALG"
 PAYS_ALLEMAGNE = u"GER"
 PAYS_ANGLETERRE = u"ENG"
@@ -24,6 +24,7 @@ PAYS_GALLES = u"WAL"
 PAYS_GRECE = u"GRE"
 PAYS_HONDURAS = u"HON"
 PAYS_HONG_KONG = u"HKG"
+PAYS_INDE = u"IND"
 PAYS_IRAN = u"IRN"
 PAYS_IRLANDE = u"NIR"
 PAYS_ISLANDE = u"ISL"
@@ -43,6 +44,7 @@ PAYS_SENEGAL = u"sen"
 PAYS_SURINAME = u"SUR"
 PAYS_SYRIE = u"SYR"
 PAYS_TAHITI = u"TAH"
+PAYS_TAIPEI_CHINOIS = u"TPE"
 PAYS_TRINITE_TOBAGO = u"TTO"
 PAYS_TUNISIE = u"TUN"
 PAYS_TURQUIE = u"TUR"
@@ -193,6 +195,16 @@ def getpays(code):
         result = colorlib.ecrire(colorlib.ENCRE_BLEU, u"I") + colorlib.ecrire(colorlib.ENCRE_BLANC, u"s")
         result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"l") + colorlib.ecrire(colorlib.ENCRE_BLANC, u"an")
         result += colorlib.ecrire(colorlib.ENCRE_BLEU, u"de")
+    elif PAYS_TAIPEI_CHINOIS in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU, u"Ta") + colorlib.ecrire(colorlib.ENCRE_BLANC, u"ip")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"e")
+        result += colorlib.ecrire(colorlib.ENCRE_BLEU_BLANC, u"\U0001F338 ")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Chi") + colorlib.ecrire(colorlib.ENCRE_BLANC, u"no")
+        result += colorlib.ecrire(colorlib.ENCRE_BLEU, u"is")
+    elif PAYS_INDE in code:
+        result = colorlib.ecrire(colorlib.ENCRE_ORANGE, u"In")
+        result += colorlib.ecrire(colorlib.ENCRE_BLEU_BLANC, u"\U00002638 ")
+        result += colorlib.ecrire(colorlib.ENCRE_VERTE, u"de")
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
@@ -246,3 +258,5 @@ if __name__ == "__main__":
     print getpays(u"MEX")
     print getpays(u"HON")
     print getpays(u"ISL")
+    print getpays(u"TPE")
+    print getpays(u"IND")
