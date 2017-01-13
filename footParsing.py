@@ -1,3 +1,4 @@
+# coding: utf8
 import feedparser
 import re
 import payslib
