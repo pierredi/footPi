@@ -1,3 +1,4 @@
+# coding: utf8
 ENCRE_ROUGE = [str(1), str(31), str(40)]
 ENCRE_VERTE = [str(1), str(32), str(40)]
 ENCRE_JAUNE = [str(1), str(33), str(40)]
@@ -48,33 +49,39 @@ def ecrire(couleur, phrase):
 
 
 def clignote(name):
+    unicode_string = name.decode('utf-8')
     result = CLIGNOTE+u" {}"+END
-    return str(result .format(name))
+    return str(result .format(unicode_string))
 
 
 def violet(name):
+    unicode_string = name.decode('utf-8')
     result = PURPLE+u" {}"+END
-    return str(result .format(name))
+    return result .format(unicode_string)
 
 
 def violet_clair(name):
+    unicode_string = name.decode('utf-8')
     result = LIGHT_PURPLE+u" {}"+END
-    return str(result .format(name))
+    return str(result .format(unicode_string))
 
 
 def rouge(name):
+    unicode_string = name.decode('utf-8')
     result = RED+u" {}"+END
-    return str(result .format(name))
+    return str(result .format(unicode_string))
 
 
 def vert(name):
+    unicode_string = name.decode('utf-8')
     result = GREEN+u" {}"+END
-    return str(result .format(name))
+    return str(result .format(unicode_string))
 
 
 def jaune(name):
+    unicode_string = name.decode('utf-8')
     result = YELLOW+u" {}"+END
-    return str(result .format(name))
+    return str(result .format(unicode_string))
 
 
 if __name__ == "__main__":
@@ -84,4 +91,3 @@ if __name__ == "__main__":
     print rouge("test ecriture rouge")
     print vert("test ecriture vert")
     print jaune("test ecriture jaune")
-    print clignote("test ecriture jaune")
