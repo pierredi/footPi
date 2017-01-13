@@ -49,6 +49,7 @@ PAYS_TRINITE_TOBAGO = u"TTO"
 PAYS_TUNISIE = u"TUN"
 PAYS_TURQUIE = u"TUR"
 PAYS_VIET_NAM = u"VIE"
+XIANGQI = u"XIA"
 MATCH_AMICAL = u"FG"
 
 
@@ -205,6 +206,38 @@ def getpays(code):
         result = colorlib.ecrire(colorlib.ENCRE_ORANGE, u"In")
         result += colorlib.ecrire(colorlib.ENCRE_BLEU_BLANC, u"\U00002638 ")
         result += colorlib.ecrire(colorlib.ENCRE_VERTE, u"de")
+    elif XIANGQI in code:
+        result = u"G\u00e9n\u00e9ral :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00005C07")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00005E25") + u"\n"
+        result += u"Gardes :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U000058EB")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00004ED5") + u"\n"
+        result += u"\u00c9l\u00e9phants :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00008C61")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U000076F8") + u"\n"
+        result += u"Chevaux :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U000099ac")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U0000508C") + u"\n"
+        result += u"Bombardes :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00007832")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U000070AE") + u"\n"
+        result += u"Chariots :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00008eca")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00008f66") + u"\n"
+        result += u"Soldats :"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00005352")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00005175") + u"\n"
+
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u" \U00008eca \U000099ac \U00008C61 \U000058EB \U00005C07")
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u" \U000058EB \U00008C61 \U000099ac \U00008eca") + u"\n"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"                           \n")
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"    \U00007832                \U00007832   ") + u"\n"
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u" \U00005352    \U00005352    \U00005352    \U00005352")
+        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"    \U00005352") + u"\n"
+
+
+
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
@@ -260,3 +293,5 @@ if __name__ == "__main__":
     print getpays(u"ISL")
     print getpays(u"TPE")
     print getpays(u"IND")
+    print getpays(u"XIA")
+
