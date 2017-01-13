@@ -1,3 +1,4 @@
+# coding: utf8
 import footParsing
 import time
 import datetime
