@@ -1,3 +1,4 @@
+# coding: utf8
 import colorlib
 FR_ANGERS = u"Angers"
 FR_BASTIA = u"Bastia"
