@@ -285,4 +285,3 @@ if __name__ == "__main__":
     print getpays(u"SLV")
     print getpays(u"CHI")
     print getpays(u"PAN")
-
