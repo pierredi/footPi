@@ -12,6 +12,7 @@ PAYS_BELGIQUE = u"BEL"
 PAYS_BRESIL = u"BRA"
 PAYS_COSTA_RICA = u"CRC"
 PAYS_COTE_IVOIRE = u"CIV"
+PAYS_CHILI = u"CHI"
 PAYS_CHYPRE = u"CYP"
 PAYS_ECOSSE = u"SCO"
 PAYS_EGYPTE = u"EGY"
@@ -22,6 +23,7 @@ PAYS_FRANCE = u"FRA"
 PAYS_GABON = u"GAB"
 PAYS_GALLES = u"WAL"
 PAYS_GRECE = u"GRE"
+PAYS_GUATEMALA = u"GUA"
 PAYS_HONDURAS = u"HON"
 PAYS_HONG_KONG = u"HKG"
 PAYS_INDE = u"IND"
@@ -37,9 +39,11 @@ PAYS_LIBAN = u"LBN"
 PAYS_MALTE = u"MLT"
 PAYS_MEXIQUE = u"MEX"
 PAYS_OMAN = u"OMA"
+PAYS_PANAMA = u"PAN"
 PAYS_PAYS_BAS = u"NED"
 PAYS_PORTUGAL = u"POR"
 PAYS_QATAR = u"QAT"
+PAYS_SALVADOR = u"SLV"
 PAYS_SENEGAL = u"sen"
 PAYS_SURINAME = u"SUR"
 PAYS_SYRIE = u"SYR"
@@ -49,7 +53,6 @@ PAYS_TRINITE_TOBAGO = u"TTO"
 PAYS_TUNISIE = u"TUN"
 PAYS_TURQUIE = u"TUR"
 PAYS_VIET_NAM = u"VIE"
-XIANGQI = u"XIA"
 MATCH_AMICAL = u"FG"
 
 
@@ -206,38 +209,23 @@ def getpays(code):
         result = colorlib.ecrire(colorlib.ENCRE_ORANGE, u"In")
         result += colorlib.ecrire(colorlib.ENCRE_BLEU_BLANC, u"\U00002638 ")
         result += colorlib.ecrire(colorlib.ENCRE_VERTE, u"de")
-    elif XIANGQI in code:
-        result = u"G\u00e9n\u00e9ral :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00005C07")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00005E25") + u"\n"
-        result += u"Gardes :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U000058EB")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00004ED5") + u"\n"
-        result += u"\u00c9l\u00e9phants :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00008C61")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U000076F8") + u"\n"
-        result += u"Chevaux :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U000099ac")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U0000508C") + u"\n"
-        result += u"Bombardes :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00007832")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U000070AE") + u"\n"
-        result += u"Chariots :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00008eca")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00008f66") + u"\n"
-        result += u"Soldats :"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"\U00005352")
-        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"\U00005175") + u"\n"
-
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u" \U00008eca \U000099ac \U00008C61 \U000058EB \U00005C07")
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u" \U000058EB \U00008C61 \U000099ac \U00008eca") + u"\n"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"                           \n")
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"    \U00007832                \U00007832   ") + u"\n"
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u" \U00005352    \U00005352    \U00005352    \U00005352")
-        result += colorlib.ecrire(colorlib.ENCRE_NOIRE, u"    \U00005352") + u"\n"
-
-
-
+    elif PAYS_GUATEMALA in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU, u"Gua")
+        result += colorlib.ecrire(colorlib.ENCRE_BLANC, u"tem")
+        result += colorlib.ecrire(colorlib.ENCRE_BLEU, u"ala")
+    elif PAYS_PANAMA in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU_BLANC, u"\u2605 ")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"Pan")
+        result += colorlib.ecrire(colorlib.ENCRE_BLEU, u"ama")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE_BLANC, u"\u2605 ")
+    elif PAYS_SALVADOR in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLEU, u"Sal")
+        result += colorlib.ecrire(colorlib.ENCRE_BLANC, u"va")
+        result += colorlib.ecrire(colorlib.ENCRE_BLEU, u"dor")
+    elif PAYS_CHILI in code:
+        result = colorlib.ecrire(colorlib.ENCRE_BLANC_BLEU, u"\u2605 ")
+        result += colorlib.ecrire(colorlib.ENCRE_BLANC, u"Ch")
+        result += colorlib.ecrire(colorlib.ENCRE_ROUGE, u"ili")
     elif MATCH_AMICAL in code:
         result = u"Match Amical"
     return result
@@ -293,5 +281,8 @@ if __name__ == "__main__":
     print getpays(u"ISL")
     print getpays(u"TPE")
     print getpays(u"IND")
-    print getpays(u"XIA")
+    print getpays(u"GUA")
+    print getpays(u"SLV")
+    print getpays(u"CHI")
+    print getpays(u"PAN")
 
